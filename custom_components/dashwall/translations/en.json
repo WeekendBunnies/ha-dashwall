@@ -1,0 +1,70 @@
+{
+  "config": {
+    "flow_title": "{name}",
+    "step": {
+      "user": {
+        "title": "Add a kiosk tablet",
+        "description": "Kiosks on your network are usually found automatically. To add one by hand, enter the address its settings screen shows under Home Assistant.",
+        "data": {
+          "host": "Host",
+          "port": "Port"
+        }
+      },
+      "pair": {
+        "title": "Pair with {name}",
+        "description": "Pairing goes through the kiosk's dashboard login, so only someone who can log in to this Home Assistant can pair it.\n\nSelect **Submit**. If the kiosk ({host}) is already logged in to this Home Assistant, pairing finishes by itself. If not, it shows the login page: log in there within five minutes."
+      }
+    },
+    "progress": {
+      "wait_for_login": "Waiting for {name} to confirm through its dashboard login. If the kiosk shows the Home Assistant login page, log in there."
+    },
+    "error": {
+      "cannot_connect": "Cannot reach the kiosk app at this address.",
+      "busy": "The kiosk is still finishing another pairing request. Try again in a few minutes.",
+      "timeout": "The kiosk did not confirm within five minutes. Is its dashboard logged in to this Home Assistant?",
+      "wrong_device": "A different kiosk answered than the one being added."
+    },
+    "abort": {
+      "already_configured": "This kiosk is already set up.",
+      "not_supported": "This device does not identify itself as a kiosk.",
+      "reauth_successful": "Paired again."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "battery_state": {
+        "name": "Battery state",
+        "state": {
+          "charging": "Charging",
+          "discharging": "Discharging",
+          "full": "Full",
+          "not_charging": "Not charging",
+          "unknown": "Unknown"
+        }
+      },
+      "charger_type": {
+        "name": "Charger type",
+        "state": {
+          "none": "None",
+          "ac": "AC",
+          "usb": "USB",
+          "wireless": "Wireless",
+          "dock": "Dock",
+          "unknown": "Unknown"
+        }
+      },
+      "battery_health": {
+        "name": "Battery health",
+        "state": {
+          "good": "Good",
+          "overheated": "Overheated",
+          "dead": "Dead",
+          "over_voltage": "Over voltage",
+          "failed": "Failed",
+          "cold": "Cold",
+          "unknown": "Unknown"
+        }
+      }
+    }
+  }
+}

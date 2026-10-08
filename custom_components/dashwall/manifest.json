@@ -1,0 +1,18 @@
+{
+  "domain": "dashwall",
+  "name": "Dashwall",
+  "codeowners": [
+    "@WeekendBunnies"
+  ],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/WeekendBunnies/ha-dashwall",
+  "integration_type": "device",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/WeekendBunnies/ha-dashwall/issues",
+  "requirements": [],
+  "version": "0.3.0",
+  "zeroconf": [
+    "_dashwall._tcp.local."
+  ]
+}
